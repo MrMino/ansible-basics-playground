@@ -1,0 +1,7 @@
+* [Installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+* [Ansible description](https://docs.ansible.com/ansible/latest/index.html#about-ansible)
+* [Ansible inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
+* [Ansible glossary](https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html)
+* [Ansible modules](https://docs.ansible.com/ansible/latest/modules)
+* [Registering variables](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#registering-variables)
+* [Conditionals](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html#playbooks-conditionals)

@@ -1,0 +1,11 @@
+{
+ "proxies":
+ {
+   "default":
+   {
+     "httpProxy": "http://10.144.1.10:8080/",
+     "httpsProxy": "http://10.144.1.10:8080/",
+     "noProxy": "localhost,127.0.0.0/8,*.local,nsn-net.net,inside.nokiasiemensnetworks.com,access.nokiasiemensnetworks.com,nsn-intra.net,nsn-rdnet.net,ext.net.nokia.com,steampowered.com,steamcommunity.com,steamgames.com,steamusercontent.com,steamcontent.com,steamstatic.com,akamaihd.net,de.alcatel-lucent.com"
+   }
+ }
+}
