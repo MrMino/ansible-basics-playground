@@ -1,0 +1,7 @@
+ansible production -m ping -i inventory.ini
+
+cd plays
+
+ansible-playbook -i ../inventory.ini hello-world.yml
+ansible-playbook -i ../inventory.ini html-sync.yml
+ansible-playbook -vvv -i ../inventory.ini http-server.yml

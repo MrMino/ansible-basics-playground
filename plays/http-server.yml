@@ -1,0 +1,31 @@
+---
+
+- name: Apt test
+  hosts: production
+  vars:
+      www_path: /var/www/html/
+  tasks:
+      - name: Copy proxy config
+        copy:
+            src: ../apt_proxy.conf
+            dest: /etc/apt/apt.conf.d/proxy.conf
+      - name: Update repositories and install apache
+        apt: name=nginx update-cache=true state=present
+        register: nginx_installed
+      - name: Update repositories and install git
+        apt: name=git update-cache=true state=present
+      - name: start nginx
+        service:
+            name: nginx
+            state: started
+      - name: Remove default www
+        file:
+            path: "{{www_path}}"
+            state: absent
+        when: nginx_installed is changed
+      - name: Sync www
+        git:
+            repo: https://github.com/mdn/beginner-html-site-styled.git
+            dest: "{{www_path}}"
+        environment:
+            https_proxy: http://10.144.1.10:8080/

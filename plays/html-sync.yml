@@ -1,0 +1,7 @@
+---
+- name: Example synchronize
+  hosts: production
+  tasks:
+      - synchronize:
+            src: ../www/index.html
+            dest: /root/
